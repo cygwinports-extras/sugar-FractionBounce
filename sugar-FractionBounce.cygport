@@ -1,0 +1,5 @@
+NAME="sugar-FractionBounce"
+VERSION=15
+RELEASE=1
+SUGAR_TYPE="Honey"
+inherit sugar
