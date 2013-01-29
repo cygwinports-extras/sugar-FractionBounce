@@ -1,0 +1,13 @@
+--- origsrc/FractionBounce-15/play_audio.py	2012-10-18 21:13:09.000000000 -0500
++++ src/FractionBounce-15/play_audio.py	2013-01-28 20:09:52.634514500 -0600
+@@ -27,8 +27,8 @@ import subprocess
+ 
+ def play_audio_from_file(parent, file_path):
+     """ Audio media """
+-    command_line = ['gst-launch', 'filesrc', 'location=' + file_path,
++    command_line = ['gst-launch-1.0', 'filesrc', 'location=' + file_path,
+                     '! oggdemux', '! vorbisdec', '! audioconvert',
+-                    '! alsasink']
++                    '! autoaudiosink']
+     subprocess.call(command_line)
+ 
